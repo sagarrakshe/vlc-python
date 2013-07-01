@@ -4,13 +4,13 @@ Python ctypes-based bindings for libvlc
 The bindings use ctypes to directly call the libvlc dynamic lib, and
 the code is generated from the include files defining the public API.
 
-## License
+### License
 
 The generated module is licensed, like libvlc, under the GNU Lesser
 General Public License 2.1 or later. The module generator itself is
 licensed under the GNU General Public License version 2 or later.
 
-## Building
+### Building
 
 To generate the vlc.py module and its documentation, use
 make
@@ -19,7 +19,7 @@ or use the generated/vlc.py file.
 Documentation building needs epydoc. An online build is available at 
 http://advene.org/download/python-ctypes/
 
-## Layout
+### Layout
 
 The module offers two ways of accessing the API - a raw access to all
 exported methods, and more convenient wrapper classes :
@@ -32,13 +32,13 @@ exported methods, and more convenient wrapper classes :
   Media, MediaPlayer, etc) are wrapped as classes, with shorter method
   names.
 
-## Using the module
+### Using the module
 
 On win32, the simplest way is to put the vlc.py file in the same
 directory as the 	libvlc.dll file (standard location:
 `c:\Program Files\VideoLAN\VLC`).
 
-## Using raw access:
+### Using raw access:
 
     >>> import vlc
     >>> vlc.libvlc_get_version()
@@ -50,7 +50,7 @@ directory as the 	libvlc.dll file (standard location:
     >>> vlc.libvlc_audio_get_volume(i,e)
     50
 
-## Using wrapper classes:
+### Using wrapper classes:
 
     >>> import vlc
     >>> i=vlc.Instance('--no-audio', '--fullscreen')
@@ -63,7 +63,7 @@ directory as the 	libvlc.dll file (standard location:
     >>> p.set_media(m)
     >>> p.play()
 
-## shorter:
+### shorter:
 
     >>> import vlc
     >>> p=vlc.MediaPlayer('file:///tmp/foo.avi')
